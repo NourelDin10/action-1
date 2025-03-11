@@ -1,3 +1,3 @@
 # action-1
-this thw first workflow 
-this course form kode kloud
+this the first workflow 
+this course from kode kloud
