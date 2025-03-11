@@ -19,7 +19,7 @@ jobs:
           uses: actions/download-artifact@v4
           with:
            name: my-artifact
-           path: .
+           path: ./welcome.txt
         - name: read file 
           run: cat welcome.txt
 
