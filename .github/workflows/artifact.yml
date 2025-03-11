@@ -1,0 +1,23 @@
+on: push 
+jobs:
+    upload_files:
+        runs-on: ubuntu-latest
+        steps:
+        - name: create welcome file 
+          run : echo "hello form nour " > welcome.txt
+        - name: upload file
+          uses: actions/upload-artifact@v4
+          with:
+            name: my-artifact
+            path: welcome.txt
+    
+    download_files:
+        runs-on: ubuntu-latest
+        steps:
+        - name: upload artifact
+          uses: actions/download-artifact@v4
+          with:
+           name: my-artifact
+        - name: read file 
+          run: cat welcome.txt
+
